@@ -11,6 +11,6 @@ const Expenses = (props) => {
             <ExpenseItem title={props.items[3].title} amount={props.items[3].amount} date={props.items[3].date}></ExpenseItem>
         </Card>
     );
-}
+};
 
 export default Expenses;
