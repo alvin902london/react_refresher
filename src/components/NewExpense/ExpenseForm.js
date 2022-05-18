@@ -46,10 +46,15 @@ const ExpenseForm = (props) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
+        // The demo application has a small bug at the moment: When adding multiple values, 
+        // those values are added as strings instead of numbers.
+
+        // Fixing it is easy though, simply make sure you enforce a number conversion:
+
 
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         };
 
